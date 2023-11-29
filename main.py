@@ -1,14 +1,49 @@
 def q1(cidades):
-    return []
+    x = list(cidades.items())
+    resultado = []
+    for i in x:
+        if i[1] > 100:
+            resultado.append(i[0])
+    return resultado
 
 def q2(lista1, lista2):
-    return []
+    
+    lista = []
 
-def q3(valores):
-    return [],[]
+    for i in range(len(lista1)):
+        if lista1[i] > 0:
+            lista.append(lista1[i])
+        if lista2[i] > 0:
+            lista.append(lista2[i])
+    soma = sum(lista)
+    lista.sort()
+    return (soma, lista)
 
-def q4(valores):
-    return []
+    
+
+def q3():
+    
+    num = None
+    valores = []
+    while num != 0:
+        num = int(input('Digite (pare digitando 0): '))
+        valores.append(num)
+
+
+    par = []
+    impar = []
+
+    for i in valores:
+        if i % 2 == 0 and i != 0:
+            par.append(i)
+        elif i % 2 != 0 and i != 0:
+            impar.append(i)
+    return print([par],[impar])
+
+def q4():
+    pass
+        
+
 
 def main():
     # Teste as questões que você desenvolveu manualmente:
@@ -37,5 +72,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
 
 
